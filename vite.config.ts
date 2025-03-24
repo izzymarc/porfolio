@@ -34,6 +34,7 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
+    sourcemap: true,
     rollupOptions: {
       external: [
         '@rollup/rollup-linux-x64-gnu',
@@ -47,4 +48,8 @@ export default defineConfig({
       ]
     }
   },
+  server: {
+    port: 5000,
+    host: true
+  }
 });
