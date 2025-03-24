@@ -34,9 +34,6 @@
     "helmet": "^7.1.0"
   },
   "devDependencies": {
-    "@replit/vite-plugin-cartographer": "^0.0.1",
-    "@replit/vite-plugin-runtime-error-modal": "^0.0.1",
-    "@replit/vite-plugin-shadcn-theme-json": "^0.0.1",
     "@types/node": "^20.11.16",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
