@@ -2,8 +2,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { about, personalInfo } from "@/constants/data";
 import { Briefcase, GraduationCap, Heart, MapPin, MessageCircle, ArrowRight } from "lucide-react";
-import profileImage from "@/assets/images/profile.jpg";
 import { useRef } from "react";
+
+const profileImageUrl = "https://via.placeholder.com/400";
 
 const AboutSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -146,10 +147,10 @@ const AboutSection = () => {
                   className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 />
                 <img 
-                  src={profileImage} 
-              alt="Ezekiel Funom Gwamna" 
+                  src={profileImageUrl} 
+                  alt="Ezekiel Funom Gwamna" 
                   className="rounded-lg shadow-lg w-full object-cover h-80 md:h-96 relative z-10 transition-transform duration-300 group-hover:scale-105"
-            />
+                />
               </div>
             </motion.div>
           </motion.div>

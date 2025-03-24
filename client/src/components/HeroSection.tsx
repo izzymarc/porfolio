@@ -2,8 +2,9 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { personalInfo } from "@/constants/data";
-import profileImage from "@/assets/images/profile.jpg";
 import { useEffect, useState, useRef } from "react";
+
+const profileImageUrl = "https://via.placeholder.com/400";
 
 const HeroSection = () => {
   const [typedText, setTypedText] = useState("");
@@ -246,7 +247,7 @@ const HeroSection = () => {
                   }}
                 />
                 <img 
-                  src={profileImage} 
+                  src={profileImageUrl} 
                 alt={personalInfo.name} 
                 className="w-72 h-72 object-cover rounded-full border-4 border-border shadow-xl relative z-10"
               />

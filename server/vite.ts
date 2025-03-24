@@ -3,13 +3,15 @@ import fs from "fs";
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
 import { createServer as createViteServer, createLogger } from "vite";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-import { type Server } from "http";
+import type { Server } from "http";
+import type { IncomingMessage, ServerResponse } from "http";
 import viteConfig from "../vite.config";
 import { nanoid } from "nanoid";
 
 const viteLogger = createLogger();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export function log(message: string, source = "express") {
   const formattedTime = new Date().toLocaleTimeString("en-US", {
@@ -85,4 +87,18 @@ export function serveStatic(app: Express) {
   app.use("*", (_req, res) => {
     res.sendFile(path.resolve(distPath, "index.html"));
   });
+}
+
+export async function createViteDevServer(httpServer: Server) {
+  const viteServer = await createViteServer({
+    server: {
+      middlewareMode: true,
+      hmr: {
+        server: httpServer,
+      },
+      allowedHosts: ["localhost", "127.0.0.1"]
+    }
+  });
+
+  return viteServer;
 }
