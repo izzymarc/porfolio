@@ -43,11 +43,11 @@ export interface PersonalInfo {
 }
 
 export const personalInfo: PersonalInfo = {
-  name: "Ezekiel Gwamna",
+  name: "Ezekiel Funom Gwamna",
   title: "Full Stack Developer",
-  email: "ezekiel.gwamna@example.com",
-  phone: "+1 (555) 123-4567",
-  location: "San Francisco, CA",
+  email: "ezekiel.gwamna@hotmail.com",
+  phone: "+2349080000236",
+  location: "Abuja Nigeria #8 Dalhatu Maccido Street, Katampe Extension Abuja, FCT, Nigeria",
   bio: "Full-stack software engineer with over 7 years of experience designing and developing web applications across various domains including e-commerce, fintech, and digital marketing. Skilled in artificial intelligence and machine learning technologies with a focus on practical applications.",
   resumeUrl: "/resume.pdf",
   githubUrl: "https://github.com/izzymarc",
