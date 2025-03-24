@@ -1,5 +1,5 @@
 import { ArrowUp } from "lucide-react";
-import { useLocation } from "wouter";
+import { useLocation, Link } from "react-router-dom";
 import { personalInfo } from "@/constants/data";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -9,16 +9,17 @@ import { useRef } from "react";
 
 const navigationItems = [
   { id: "home", label: "Home", path: "/" },
-  { id: "about", label: "About", path: "/" },
-  { id: "skills", label: "Skills", path: "/" },
+  { id: "about", label: "About", path: "/about" },
   { id: "projects", label: "Projects", path: "/projects" },
+  { id: "blog", label: "Blog", path: "/blog" },
+  { id: "resume", label: "Resume", path: "/resume" },
   { id: "contact", label: "Contact", path: "/contact" }
 ];
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [location] = useLocation();
+  const location = useLocation();
   
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
@@ -61,23 +62,17 @@ const Footer = () => {
   const handleNavigation = (item: { id: string; path: string }) => {
     if (item.path === "/") {
       // If we're already on the home page, scroll to section
-      if (location === "/") {
+      if (location.pathname === "/") {
         scrollToSection(item.id);
-      } else {
-        // If we're on another page, navigate to home and then scroll
-        window.location.href = `/#${item.id}`;
       }
-    } else {
-      // For other pages, use normal navigation
-      window.location.href = item.path;
     }
   };
 
   return (
-    <footer className="bg-gray-900 text-white py-12 relative overflow-hidden">
+    <footer className="bg-card text-foreground py-12 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/50 to-gray-900" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-card/50 to-card" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div 
@@ -92,25 +87,23 @@ const Footer = () => {
             variants={itemVariants}
           >
             <h2 className="text-2xl font-bold mb-2">{personalInfo.name}</h2>
-            <p className="text-gray-400">{personalInfo.title}</p>
+            <p className="text-muted-foreground">{personalInfo.title}</p>
           </motion.div>
           
           <motion.div 
             className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
             variants={itemVariants}
           >
-            {navigationItems.map((item: { id: string; label: string; path: string }) => (
-              <motion.li
+            {navigationItems.map((item) => (
+              <motion.div
                 key={item.id}
                 variants={itemVariants}
                 className="relative"
               >
-                <motion.button
+                <Link
+                  to={item.path}
                   onClick={() => handleNavigation(item)}
-                  className="hover:text-primary/80 transition duration-300 group relative text-left"
-                  variants={itemVariants}
-                  whileHover={{ x: 5 }}
-                  transition={{ duration: 0.2 }}
+                  className="hover:text-primary transition duration-300 group relative text-left"
                 >
                   <span className="relative">
                     {item.label}
@@ -118,14 +111,14 @@ const Footer = () => {
                       className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"
                     />
                   </span>
-                </motion.button>
-              </motion.li>
+                </Link>
+              </motion.div>
             ))}
           </motion.div>
         </motion.div>
         
         <motion.hr 
-          className="border-gray-800 my-8"
+          className="border-border my-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -140,7 +133,7 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           <motion.p 
-            className="text-gray-400 mb-4 md:mb-0"
+            className="text-muted-foreground mb-4 md:mb-0"
             variants={itemVariants}
           >
             © {currentYear} {personalInfo.name}. All rights reserved.
@@ -150,18 +143,30 @@ const Footer = () => {
             className="flex space-x-4"
             variants={itemVariants}
           >
-            {personalInfo.socialLinks.map((link) => (
-              <motion.a
-                key={link.name}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                variants={itemVariants}
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <link.icon size={20} />
-              </motion.a>
-            ))}
+            <a
+              href={personalInfo.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              GitHub
+            </a>
+            <a
+              href={personalInfo.linkedinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              LinkedIn
+            </a>
+            <a
+              href={personalInfo.twitterUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Twitter
+            </a>
           </motion.div>
         </motion.div>
       </div>

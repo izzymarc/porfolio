@@ -1,11 +1,17 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown, Github, Linkedin, Twitter } from "lucide-react";
 import { personalInfo } from "@/constants/data";
 import { useEffect, useState, useRef } from "react";
 import profileImage from "@/assets/images/profile.jpg";
 
 const profileImageUrl = profileImage;
+
+const socialLinks = [
+  { name: "GitHub", url: personalInfo.githubUrl, icon: Github },
+  { name: "LinkedIn", url: personalInfo.linkedinUrl, icon: Linkedin },
+  { name: "Twitter", url: personalInfo.twitterUrl, icon: Twitter }
+];
 
 const HeroSection = () => {
   const [typedText, setTypedText] = useState("");
@@ -151,7 +157,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
             >
-              {personalInfo.shortBio}
+              {personalInfo.bio}
             </motion.p>
             <motion.div 
               className="flex flex-wrap gap-4"
@@ -190,7 +196,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
             >
-              {personalInfo.socialLinks.map((link, index) => (
+              {socialLinks.map((link, index) => (
                 <motion.a 
                   key={link.name}
                   href={link.url} 

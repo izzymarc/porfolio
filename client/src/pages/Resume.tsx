@@ -197,6 +197,31 @@ const ResumePage = () => {
               ))}
             </div>
           </section>
+
+          {/* Certifications Section */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">Certifications</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {certifications.map((cert, index) => (
+                <motion.div
+                  key={cert.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-card rounded-lg p-6"
+                >
+                  <h3 className="text-xl font-semibold mb-2">{cert.name}</h3>
+                  <p className="text-muted-foreground mb-2">{cert.issuer}</p>
+                  <p className="text-muted-foreground mb-4">{cert.date}</p>
+                  <Button variant="outline" size="sm" asChild>
+                    <a href={cert.url} target="_blank" rel="noopener noreferrer">
+                      View Certificate
+                    </a>
+                  </Button>
+                </motion.div>
+              ))}
+            </div>
+          </section>
         </div>
       </motion.div>
     </div>

@@ -62,7 +62,23 @@ const Header = () => {
                 </Link>
               );
             })}
-            <ThemeToggle />
+            <div className="flex items-center space-x-4">
+              {socialLinks.map((link) => {
+                const Icon = link.icon;
+                return (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    <Icon className="h-4 w-4" />
+                  </a>
+                );
+              })}
+              <ThemeToggle />
+            </div>
           </nav>
 
           {/* Mobile Menu Button */}

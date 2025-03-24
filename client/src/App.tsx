@@ -1,4 +1,4 @@
-import { Route, Switch } from "wouter";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
@@ -17,54 +17,56 @@ import NotFound from "@/pages/not-found";
 
 function App() {
   return (
-    <ThemeProvider>
-      <div className="min-h-screen bg-background text-foreground">
-        <Header />
-        <main className="flex-grow pt-24 pb-16">
-          <AnimatePresence mode="wait">
-            <Switch>
-              <Route path="/">
-                <PageTransition>
-                  <Home />
-                </PageTransition>
-              </Route>
-              <Route path="/about">
-                <PageTransition>
-                  <About />
-                </PageTransition>
-              </Route>
-              <Route path="/projects">
-                <PageTransition>
-                  <Projects />
-                </PageTransition>
-              </Route>
-              <Route path="/blog">
-                <PageTransition>
-                  <Blog />
-                </PageTransition>
-              </Route>
-              <Route path="/contact">
-                <PageTransition>
-                  <Contact />
-                </PageTransition>
-              </Route>
-              <Route path="/resume">
-                <PageTransition>
-                  <Resume />
-                </PageTransition>
-              </Route>
-              <Route>
-                <PageTransition>
-                  <NotFound />
-                </PageTransition>
-              </Route>
-            </Switch>
-          </AnimatePresence>
-        </main>
-        <Footer />
-        <ScrollToTop />
-      </div>
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider>
+        <div className="min-h-screen bg-background text-foreground">
+          <Header />
+          <main className="flex-grow pt-24 pb-16">
+            <AnimatePresence mode="wait">
+              <Routes>
+                <Route path="/" element={
+                  <PageTransition>
+                    <Home />
+                  </PageTransition>
+                } />
+                <Route path="/about" element={
+                  <PageTransition>
+                    <About />
+                  </PageTransition>
+                } />
+                <Route path="/projects" element={
+                  <PageTransition>
+                    <Projects />
+                  </PageTransition>
+                } />
+                <Route path="/blog" element={
+                  <PageTransition>
+                    <Blog />
+                  </PageTransition>
+                } />
+                <Route path="/contact" element={
+                  <PageTransition>
+                    <Contact />
+                  </PageTransition>
+                } />
+                <Route path="/resume" element={
+                  <PageTransition>
+                    <Resume />
+                  </PageTransition>
+                } />
+                <Route path="*" element={
+                  <PageTransition>
+                    <NotFound />
+                  </PageTransition>
+                } />
+              </Routes>
+            </AnimatePresence>
+          </main>
+          <Footer />
+          <ScrollToTop />
+        </div>
+      </ThemeProvider>
+    </Router>
   );
 }
 
