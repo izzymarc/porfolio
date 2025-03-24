@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { projects } from "@/constants/data";
 import { ArrowRight, Eye, Code2 } from "lucide-react";
 import { Button } from "@/components/ui/button";

@@ -1,6 +1,6 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import { Code, Wrench, ChevronRight } from "lucide-react";
 import { skills, Skill } from "@/constants/data";
-import { Cloud, Code, Terminal, Wrench, Brain, ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const SkillBar = ({ skill, index }: { skill: Skill; index: number }) => {

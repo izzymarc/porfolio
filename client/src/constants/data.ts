@@ -1,4 +1,4 @@
-import { Github, Mail, Linkedin, Twitter, ExternalLink, Code, LucideIcon, Instagram } from "lucide-react";
+import { Github, Linkedin, Twitter, LucideIcon, Instagram } from "lucide-react";
 
 interface Education {
   degree: string;

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Mail, Phone, MapPin, Send, MessageSquare, Loader2, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Loader2, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -19,6 +19,7 @@ import { useToast } from "@/hooks/use-toast";
 import { personalInfo } from "@/constants/data";
 import emailjs from '@emailjs/browser';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { ContactSection } from "@/components/ContactSection";
 
 interface FAQ {
   question: string;

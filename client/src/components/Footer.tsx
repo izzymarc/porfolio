@@ -1,8 +1,19 @@
+import { ArrowUp } from "lucide-react";
+import { useLocation } from "wouter";
 import { personalInfo } from "@/constants/data";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUp, Heart } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "wouter";
+import { useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+
+const navigationItems = [
+  { id: "home", label: "Home", path: "/" },
+  { id: "about", label: "About", path: "/" },
+  { id: "skills", label: "Skills", path: "/" },
+  { id: "projects", label: "Projects", path: "/projects" },
+  { id: "contact", label: "Contact", path: "/contact" }
+];
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -47,14 +58,6 @@ const Footer = () => {
     }
   };
 
-  const navigationItems = [
-    { id: "home", label: "Home", path: "/" },
-    { id: "about", label: "About", path: "/" },
-    { id: "skills", label: "Skills", path: "/" },
-    { id: "projects", label: "Projects", path: "/projects" },
-    { id: "contact", label: "Contact", path: "/contact" }
-  ];
-
   const handleNavigation = (item: { id: string; path: string }) => {
     if (item.path === "/") {
       // If we're already on the home page, scroll to section
@@ -96,22 +99,27 @@ const Footer = () => {
             className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
             variants={itemVariants}
           >
-            {navigationItems.map((item, index) => (
-              <motion.button
+            {navigationItems.map((item: { id: string; label: string; path: string }) => (
+              <motion.li
                 key={item.id}
-                onClick={() => handleNavigation(item)}
-                className="hover:text-primary/80 transition duration-300 group relative text-left"
                 variants={itemVariants}
-                whileHover={{ x: 5 }}
-                transition={{ duration: 0.2 }}
+                className="relative"
               >
-                <span className="relative">
-                  {item.label}
-                  <motion.span
-                    className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"
-                  />
-                </span>
-              </motion.button>
+                <motion.button
+                  onClick={() => handleNavigation(item)}
+                  className="hover:text-primary/80 transition duration-300 group relative text-left"
+                  variants={itemVariants}
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <span className="relative">
+                    {item.label}
+                    <motion.span
+                      className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"
+                    />
+                  </span>
+                </motion.button>
+              </motion.li>
             ))}
           </motion.div>
         </motion.div>
@@ -142,27 +150,14 @@ const Footer = () => {
             className="flex space-x-4"
             variants={itemVariants}
           >
-            {personalInfo.socialLinks.map((link, index) => (
-              <motion.a 
+            {personalInfo.socialLinks.map((link) => (
+              <motion.a
                 key={link.name}
-                href={link.url} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className={`${
-                  link.name === 'LinkedIn' 
-                    ? 'bg-[#0A66C2]' 
-                    : link.name === 'GitHub' 
-                      ? 'bg-[#333]' 
-                      : link.name === 'Twitter' 
-                        ? 'bg-[#1DA1F2]'
-                        : link.name === 'Instagram'
-                          ? 'bg-[#E4405F]'
-                          : 'bg-primary'
-                } text-white p-3 rounded-full hover:bg-opacity-90 transition duration-300`}
-                aria-label={link.name}
-                whileHover={{ y: -3, scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ duration: 0.2 }}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                variants={itemVariants}
+                className="text-muted-foreground hover:text-foreground transition-colors"
               >
                 <link.icon size={20} />
               </motion.a>

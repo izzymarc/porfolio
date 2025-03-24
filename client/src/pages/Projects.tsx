@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { Github, ExternalLink, Search, Filter } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
+import { motion, AnimatePresence } from "framer-motion";
+import { Search, Filter } from "lucide-react";
 import { projects } from "@/constants/data";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { Badge } from "@/components/ui/badge";
 
 const ProjectsPage = () => {
   const [filteredProjects, setFilteredProjects] = useState(projects);
