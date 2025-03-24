@@ -3,8 +3,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { personalInfo } from "@/constants/data";
 import { useEffect, useState, useRef } from "react";
+import profileImage from "@/assets/images/profile.jpg";
 
-const profileImageUrl = "https://via.placeholder.com/400";
+const profileImageUrl = profileImage;
 
 const HeroSection = () => {
   const [typedText, setTypedText] = useState("");

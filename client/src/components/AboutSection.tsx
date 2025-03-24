@@ -3,8 +3,9 @@ import { Button } from "@/components/ui/button";
 import { about, personalInfo } from "@/constants/data";
 import { Briefcase, GraduationCap, Heart, MapPin, MessageCircle, ArrowRight } from "lucide-react";
 import { useRef } from "react";
+import profileImage from "@/assets/images/profile.jpg";
 
-const profileImageUrl = "https://via.placeholder.com/400";
+const profileImageUrl = profileImage;
 
 const AboutSection = () => {
   const sectionRef = useRef<HTMLElement>(null);

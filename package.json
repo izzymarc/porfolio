@@ -5,7 +5,7 @@
   "main": "server/index.ts",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "cd client && vite --port 5000",
     "build": "cd client && tsc -p tsconfig.json && vite build",
     "preview": "vite preview",
     "start": "node dist/server/index.js",
