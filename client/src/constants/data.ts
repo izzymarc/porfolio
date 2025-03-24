@@ -19,14 +19,17 @@ interface Certification {
   year: string;
 }
 
-interface PersonalInfo {
+export interface PersonalInfo {
   name: string;
   title: string;
   email: string;
   phone: string;
   location: string;
-  shortBio: string;
+  bio: string;
   resumeUrl: string;
+  githubUrl: string;
+  linkedinUrl: string;
+  twitterUrl: string;
   availability: string;
   about: string;
   education: Education[];
@@ -40,13 +43,16 @@ interface PersonalInfo {
 }
 
 export const personalInfo: PersonalInfo = {
-  name: "Ezekiel Funom Gwamna",
+  name: "Ezekiel Gwamna",
   title: "Full Stack Developer",
-  email: "ezekiel.gwamna@hotmail.com",
-  phone: "+2349080000236",
-  location: "Abuja Nigeria #8 Dalhatu Maccido Street, Katampe Extension Abuja, FCT, Nigeria",
-  shortBio: "Passionate Full Stack Developer with expertise in building modern web applications. Specialized in React, Node.js, and cloud technologies.",
+  email: "ezekiel.gwamna@example.com",
+  phone: "+1 (555) 123-4567",
+  location: "San Francisco, CA",
+  bio: "Full-stack software engineer with over 7 years of experience designing and developing web applications across various domains including e-commerce, fintech, and digital marketing. Skilled in artificial intelligence and machine learning technologies with a focus on practical applications.",
   resumeUrl: "/resume.pdf",
+  githubUrl: "https://github.com/izzymarc",
+  linkedinUrl: "https://linkedin.com/in/izzymarc",
+  twitterUrl: "https://twitter.com/izzymarc",
   availability: "Available for freelance work and full-time positions",
   about: "I am a dedicated Full Stack Developer with a passion for creating efficient, scalable, and user-friendly web applications. With a strong foundation in both front-end and back-end development, I strive to deliver high-quality solutions that meet client needs and exceed expectations.",
   education: [
