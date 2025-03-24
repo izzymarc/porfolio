@@ -5,8 +5,6 @@ import { Briefcase, GraduationCap, Heart, MapPin, MessageCircle } from "lucide-r
 import { useRef } from "react";
 import profileImage from "@/assets/images/profile.jpg";
 
-const profileImageUrl = profileImage;
-
 const AboutSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -148,7 +146,7 @@ const AboutSection = () => {
                   className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 />
                 <img 
-                  src={profileImageUrl} 
+                  src={profileImage} 
                   alt="Ezekiel Funom Gwamna" 
                   className="rounded-lg shadow-lg w-full object-cover h-80 md:h-96 relative z-10 transition-transform duration-300 group-hover:scale-105"
                 />

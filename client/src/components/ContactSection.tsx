@@ -208,7 +208,7 @@ const ContactSection = () => {
               >
                 <h4 className="font-semibold text-foreground mb-4">Connect with me</h4>
                 <div className="flex space-x-4">
-                  {personalInfo.socialLinks.map((link, index) => (
+                  {personalInfo.socialLinks.map((link) => (
                     <motion.a 
                       key={link.name}
                       href={link.url} 
