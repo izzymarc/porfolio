@@ -43,6 +43,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="text-2xl font-bold">
             <span className="text-primary dark:text-white">Ezekiel</span>
+            <span className="text-emerald-500 dark:text-white">.</span>
           </Link>
 
           {/* Desktop Navigation */}
