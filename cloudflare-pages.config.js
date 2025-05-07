@@ -1,5 +1,25 @@
 // Cloudflare Pages configuration
 export default {
+  build: {
+    command: "cd client && npm install && npm run build",
+    baseDirectory: "client",
+    outputDirectory: "dist/public"
+  },
+  routes: [
+    {
+      pattern: "/*",
+      destination: "/index.html"
+    }
+  ],
+  headers: {
+    "/*": {
+      "X-Frame-Options": "DENY",
+      "X-Content-Type-Options": "nosniff",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+      "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:;"
+    }
+  },
   // This function handles all incoming requests to the deployed application
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
