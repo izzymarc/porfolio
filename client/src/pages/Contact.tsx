@@ -19,7 +19,6 @@ import { useToast } from "@/hooks/use-toast";
 import { personalInfo } from "@/constants/data";
 import emailjs from '@emailjs/browser';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
-import { ContactSection } from "@/components/ContactSection";
 
 interface FAQ {
   question: string;

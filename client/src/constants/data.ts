@@ -182,39 +182,120 @@ export type Project = {
   title: string;
   category: string;
   description: string;
+  problem: string;
+  approach: string;
+  solution: string;
+  impact: string;
   technologies: string[];
   imageUrl: string;
   demoUrl: string;
   sourceUrl: string;
+  metrics?: {
+    label: string;
+    value: string;
+  }[];
+  gallery?: string[];
 };
 
 export const projects: Project[] = [
   {
     title: "E-commerce Platform",
-    category: "React, Node.js, MongoDB",
-    description: "A fully responsive e-commerce platform with user authentication, product catalog, shopping cart, and payment processing.",
-    technologies: ["React", "Redux", "Node.js", "Express", "MongoDB"],
-    imageUrl: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    demoUrl: "https://project1.example.com",
-    sourceUrl: "https://github.com/ezekielgwamna/ecommerce"
+    category: "Full Stack",
+    description: "A modern e-commerce platform built with React and Node.js, featuring real-time inventory management and seamless payment processing.",
+    problem: "Small businesses needed an affordable, scalable e-commerce solution that could handle real-time inventory updates and provide a smooth checkout experience.",
+    approach: "Implemented a microservices architecture using Node.js for better scalability, with React for the frontend. Used WebSocket for real-time inventory updates and integrated Stripe for secure payments.",
+    solution: "Developed a full-featured e-commerce platform with real-time inventory tracking, automated order processing, and analytics dashboard for business owners.",
+    impact: "Helped 50+ small businesses increase their online sales by an average of 40%. The platform currently processes over 1000 orders per month with a 99.9% uptime.",
+    technologies: ["React", "Node.js", "Express", "MongoDB", "WebSocket", "Stripe", "Redis", "Docker"],
+    imageUrl: "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80",
+    demoUrl: "https://ecommerce-demo.example.com",
+    sourceUrl: "https://github.com/izzymarc/ecommerce",
+    metrics: [
+      {
+        label: "Increase in Sales",
+        value: "40%"
+      },
+      {
+        label: "Active Users",
+        value: "5000+"
+      },
+      {
+        label: "Uptime",
+        value: "99.9%"
+      }
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1546054454-aa26e2b734c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1980&q=80",
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1980&q=80",
+      "https://images.unsplash.com/photo-1556741533-6e6a62bd8b49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1980&q=80",
+      "https://images.unsplash.com/photo-1556740714-a8395b3bf30f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1980&q=80"
+    ]
   },
   {
-    title: "Task Management App",
-    category: "React, Redux, Firebase",
-    description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    technologies: ["React", "Redux", "Firebase", "React DnD"],
-    imageUrl: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    demoUrl: "https://project2.example.com",
-    sourceUrl: "https://github.com/ezekielgwamna/taskmanager"
+    title: "AI-Powered Content Manager",
+    category: "Machine Learning",
+    description: "An intelligent content management system that uses AI to automatically categorize, tag, and optimize content for better engagement.",
+    problem: "Content creators struggled with manual content organization and optimization, leading to inefficient workflows and suboptimal content performance.",
+    approach: "Leveraged natural language processing and machine learning algorithms to automate content analysis. Implemented a user-friendly interface for content management.",
+    solution: "Built an AI-powered platform that automatically analyzes, categorizes, and suggests optimizations for content, while providing detailed analytics.",
+    impact: "Reduced content processing time by 60% for clients. Improved content engagement rates by an average of 35% through AI-powered optimization suggestions.",
+    technologies: ["Python", "TensorFlow", "React", "FastAPI", "PostgreSQL", "AWS", "Docker"],
+    imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80",
+    demoUrl: "https://ai-cms-demo.example.com",
+    sourceUrl: "https://github.com/izzymarc/ai-cms",
+    metrics: [
+      {
+        label: "Time Saved",
+        value: "60%"
+      },
+      {
+        label: "Engagement Increase",
+        value: "35%"
+      },
+      {
+        label: "Active Projects",
+        value: "100+"
+      }
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1673187359217-c2e51be3d347?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1980&q=80",
+      "https://images.unsplash.com/photo-1675271591211-126ad94e495d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1980&q=80",
+      "https://images.unsplash.com/photo-1676277791608-ac54954d687b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1980&q=80",
+      "https://images.unsplash.com/photo-1675270335014-9c9c3e47e369?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1980&q=80"
+    ]
   },
   {
-    title: "Finance Dashboard",
-    category: "React, D3.js, Express",
-    description: "An interactive financial dashboard with data visualization, budget tracking, and expense analysis tools.",
-    technologies: ["React", "D3.js", "Express", "PostgreSQL"],
-    imageUrl: "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1980&q=80",
-    demoUrl: "https://project3.example.com",
-    sourceUrl: "https://github.com/ezekielgwamna/finance-dashboard"
+    title: "Financial Analytics Dashboard",
+    category: "Data Visualization",
+    description: "A comprehensive financial analytics dashboard that provides real-time insights and predictive analysis for investment decisions.",
+    problem: "Investment firms needed a centralized platform to visualize and analyze complex financial data in real-time for better decision-making.",
+    approach: "Built a responsive dashboard using React and D3.js for visualization, with a Python backend for data processing and predictive analytics.",
+    solution: "Created an intuitive dashboard with interactive charts, real-time market data integration, and AI-powered trend analysis.",
+    impact: "Helped clients improve investment returns by 25% through better data visualization and predictive insights. Now used by 20+ investment firms.",
+    technologies: ["React", "D3.js", "Python", "FastAPI", "PostgreSQL", "Redis", "AWS"],
+    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    demoUrl: "https://finance-dashboard-demo.example.com",
+    sourceUrl: "https://github.com/izzymarc/finance-dashboard",
+    metrics: [
+      {
+        label: "Investment Return Increase",
+        value: "25%"
+      },
+      {
+        label: "Active Firms",
+        value: "20+"
+      },
+      {
+        label: "Daily Active Users",
+        value: "500+"
+      }
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1543286386-2e659306cd6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1980&q=80",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1980&q=80",
+      "https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1980&q=80",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1980&q=80"
+    ]
   }
 ];
 

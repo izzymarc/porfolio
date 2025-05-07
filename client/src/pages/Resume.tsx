@@ -105,6 +105,17 @@ const certifications = [
   }
 ];
 
+const skillVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5
+    }
+  }
+};
+
 const ResumePage = () => {
   return (
     <div className="container mx-auto px-4 py-8">
@@ -187,10 +198,14 @@ const ResumePage = () => {
                 >
                   <h3 className="text-xl font-semibold mb-4">{skillGroup.category}</h3>
                   <div className="flex flex-wrap gap-2">
-                    {skillGroup.items.map((skill: string, skillIndex: number) => (
-                      <Badge key={skill} variant="secondary">
+                    {skillGroup.items.map((skill: string) => (
+                      <motion.div
+                        key={skill}
+                        variants={skillVariants}
+                        className="bg-card p-2 rounded-lg text-sm"
+                      >
                         {skill}
-                      </Badge>
+                      </motion.div>
                     ))}
                   </div>
                 </motion.div>

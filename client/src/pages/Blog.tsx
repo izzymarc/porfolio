@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
+import { Image } from "@/components/ui/image";
 
 interface BlogPost {
   id: string;
@@ -135,17 +136,17 @@ const Blog = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-card rounded-lg overflow-hidden shadow-md"
+                className="bg-card rounded-lg overflow-hidden shadow-md group hover:shadow-lg transition-all duration-300"
               >
                 <div className="aspect-video bg-muted relative">
-                  <img
+                  <Image
                     src={post.imageUrl}
                     alt={post.title}
-                    className="object-cover w-full h-full"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-6">
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
+                  <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
                     <div className="flex items-center gap-1">
                       <Calendar className="h-4 w-4" />
                       <span>{post.date}</span>
@@ -159,20 +160,20 @@ const Blog = () => {
                       <span>{post.author}</span>
                     </div>
                   </div>
-                  <h2 className="text-2xl font-semibold mb-2">{post.title}</h2>
+                  <h2 className="text-xl sm:text-2xl font-semibold mb-2 group-hover:text-primary transition-colors">{post.title}</h2>
                   <p className="text-muted-foreground mb-4">{post.excerpt}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {post.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary">
+                      <Badge key={tag} variant="secondary" className="text-xs sm:text-sm">
                         <Tag className="h-3 w-3 mr-1" />
                         {tag}
                       </Badge>
                     ))}
                   </div>
                   <Link to={`/blog/${post.id}`}>
-                    <Button variant="ghost" className="gap-2">
+                    <Button variant="ghost" className="gap-2 group-hover:text-primary">
                       Read More
-                      <ArrowRight className="h-4 w-4" />
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Button>
                   </Link>
                 </div>

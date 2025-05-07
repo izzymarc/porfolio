@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { projects } from "@/constants/data";
-import { ArrowRight, Eye, Code2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Eye, Code2, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
 const ProjectCard = ({ project, index }: { project: any, index: number }) => {

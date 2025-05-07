@@ -10,6 +10,7 @@ import PageTransition from "@/components/PageTransition";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Projects from "@/pages/Projects";
+import ProjectDetail from "@/pages/ProjectDetail";
 import Blog from "@/pages/Blog";
 import Contact from "@/pages/Contact";
 import Resume from "@/pages/Resume";
@@ -37,6 +38,11 @@ function App() {
                 <Route path="/projects" element={
                   <PageTransition>
                     <Projects />
+                  </PageTransition>
+                } />
+                <Route path="/projects/:id" element={
+                  <PageTransition>
+                    <ProjectDetail />
                   </PageTransition>
                 } />
                 <Route path="/blog" element={

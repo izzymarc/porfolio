@@ -1,24 +1,18 @@
 import { useState, useEffect } from "react";
+import { useLocation, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Sun, Moon, ChevronDown, ChevronUp, Home, User, Code, BookOpen, FileText, Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { Menu, X, Home, User, Code, BookOpen, FileText, Mail, Github, Linkedin, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import ThemeToggle from "./ThemeToggle";
 import { personalInfo } from "@/constants/data";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
+  // Close menu when route changes
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    setIsMenuOpen(false);
+  }, [location]);
 
   const navItems = [
     { path: "/", label: "Home", icon: Home },
@@ -37,7 +31,7 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? "bg-background/80 backdrop-blur-md shadow-md" : "bg-transparent"
+      isMenuOpen ? "bg-background/80 backdrop-blur-md shadow-md" : "bg-transparent"
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -78,20 +72,18 @@ const Header = () => {
                   </a>
                 );
               })}
-              <ThemeToggle />
             </div>
           </nav>
 
           {/* Mobile Menu Button */}
           <div className="flex items-center space-x-4 md:hidden">
-            <ThemeToggle />
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="relative z-50"
             >
-              {isOpen ? (
+              {isMenuOpen ? (
                 <X className="h-6 w-6" />
               ) : (
                 <Menu className="h-6 w-6" />
@@ -102,7 +94,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         <AnimatePresence>
-          {isOpen && (
+          {isMenuOpen && (
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -117,7 +109,7 @@ const Header = () => {
                       <Link
                         key={item.path}
                         to={item.path}
-                        onClick={() => setIsOpen(false)}
+                        onClick={() => setIsMenuOpen(false)}
                         className={`flex items-center space-x-3 text-lg font-medium transition-colors hover:text-primary ${
                           location.pathname === item.path ? "text-primary" : "text-muted-foreground"
                         }`}
