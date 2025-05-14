@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Testing Assets</title>
+</head>
+<body>
+  <h1>Testing Assets</h1>
+  
+  <!-- Test CSS -->
+  <link rel="stylesheet" href="client/dist/assets/index-BAcuzZ3E.css">
+  
+  <!-- Test JS -->
+  <script type="module" src="client/dist/assets/index-C7WuouzT.js"></script>
+  
+  <div id="test">
+    <p>If you see this, the HTML is working. If styled, CSS is working.</p>
+    <div id="jstest">JavaScript not loaded.</div>
+  </div>
+  
+  <script>
+    // This will be executed after the main JS file
+    setTimeout(() => {
+      const el = document.getElementById('jstest');
+      if (el) el.innerText = 'JavaScript loaded and executed!';
+    }, 1000);
+  </script>
+</body>
+</html> 

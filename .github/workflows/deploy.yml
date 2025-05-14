@@ -34,9 +34,22 @@ jobs:
           npm ci
           cd client && npm ci
           
+      - name: Show debug info
+        run: |
+          echo "Current directory: $(pwd)"
+          echo "Repository: ${{ github.repository }}"
+          ls -la
+          cd client
+          ls -la
+          
       - name: Build
         run: npm run build
         
+      - name: Verify build output
+        run: |
+          ls -la client/dist
+          ls -la client/dist/assets
+          
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
