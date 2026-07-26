@@ -1,26 +1,49 @@
 import { useState, useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Home, User, Code, BookOpen, FileText, Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { Menu, X, Home, User, Briefcase, Code, BookOpen, FileText, Mail, Github, Linkedin, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { personalInfo } from "@/constants/data";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   // Close menu when route changes
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location]);
 
+  const handleServicesClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname === "/") {
+      // Already on home page, scroll to services
+      const servicesSection = document.getElementById("services");
+      if (servicesSection) {
+        servicesSection.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Navigate to home first, then scroll
+      navigate("/");
+      setTimeout(() => {
+        const servicesSection = document.getElementById("services");
+        if (servicesSection) {
+          servicesSection.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+    setIsMenuOpen(false);
+  };
+
   const navItems = [
-    { path: "/", label: "Home", icon: Home },
-    { path: "/about", label: "About", icon: User },
-    { path: "/projects", label: "Projects", icon: Code },
-    { path: "/blog", label: "Blog", icon: BookOpen },
-    { path: "/resume", label: "Resume", icon: FileText },
-    { path: "/contact", label: "Contact", icon: Mail },
+    { path: "/", label: "Home", icon: Home, isPage: true },
+    { path: "/about", label: "About", icon: User, isPage: true },
+    { path: "/services", label: "Services", icon: Briefcase, isPage: false, onClick: handleServicesClick },
+    { path: "/projects", label: "Projects", icon: Code, isPage: true },
+    { path: "/blog", label: "Blog", icon: BookOpen, isPage: true },
+    { path: "/resume", label: "Resume", icon: FileText, isPage: true },
+    { path: "/contact", label: "Contact", icon: Mail, isPage: true },
   ];
 
   const socialLinks = [
@@ -44,6 +67,19 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => {
               const Icon = item.icon;
+              if (!item.isPage && item.onClick) {
+                return (
+                  <a
+                    key={item.path}
+                    href="#services"
+                    onClick={item.onClick}
+                    className={`flex items-center space-x-2 text-sm font-medium transition-colors hover:text-primary text-muted-foreground`}
+                  >
+                    <Icon className="h-4 w-4" />
+                    <span>{item.label}</span>
+                  </a>
+                );
+              }
               return (
                 <Link
                   key={item.path}
@@ -105,6 +141,19 @@ const Header = () => {
                 <div className="flex flex-col space-y-6">
                   {navItems.map((item) => {
                     const Icon = item.icon;
+                    if (!item.isPage && item.onClick) {
+                      return (
+                        <a
+                          key={item.path}
+                          href="#services"
+                          onClick={item.onClick}
+                          className="flex items-center space-x-3 text-lg font-medium transition-colors hover:text-primary text-muted-foreground"
+                        >
+                          <Icon className="h-5 w-5" />
+                          <span>{item.label}</span>
+                        </a>
+                      );
+                    }
                     return (
                       <Link
                         key={item.path}

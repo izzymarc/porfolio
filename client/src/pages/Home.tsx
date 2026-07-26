@@ -1,5 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import ServicesSection from "@/components/ServicesSection";
 import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
@@ -9,6 +10,7 @@ const Home = () => {
     <div className="space-y-24">
       <HeroSection />
       <AboutSection />
+      <ServicesSection />
       <SkillsSection />
       <ProjectsSection />
       <ContactSection />

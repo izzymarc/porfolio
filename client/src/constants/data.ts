@@ -305,3 +305,125 @@ export type ContactFormData = {
   subject: string;
   message: string;
 };
+
+export interface ServiceCategory {
+  title: string;
+  icon: string;
+  services: string[];
+}
+
+export const servicesData: ServiceCategory[] = [
+  {
+    title: "💻 Software Development",
+    icon: "Code",
+    services: [
+      "Full-Stack Web Development",
+      "Front-End Web Development",
+      "Back-End Development",
+      "Interactive Web Application Development",
+      "Landing Page Development",
+      "Small Business Website Development",
+      "Responsive Website Development",
+      "REST API Development & Integration",
+      "Website Maintenance & Optimization"
+    ]
+  },
+  {
+    title: "📱 Mobile App Development",
+    icon: "Smartphone",
+    services: [
+      "Native Android App Development",
+      "Native iOS App Development",
+      "Cross-Platform Mobile App Development",
+      "Mobile App UI Implementation"
+    ]
+  },
+  {
+    title: "🤖 AI & Automation",
+    icon: "Bot",
+    services: [
+      "AI Agent Development",
+      "AI Agent Evaluation",
+      "AI Safety Evaluation",
+      "AI Model Testing & Validation",
+      "AI Data Annotation & Quality Assurance",
+      "Python Automation",
+      "Workflow Automation"
+    ]
+  },
+  {
+    title: "💬 Messaging & Chatbots",
+    icon: "MessageSquare",
+    services: [
+      "Telegram Bot Development",
+      "WhatsApp Business API Integration",
+      "AI Chatbot Development",
+      "Customer Support Automation",
+      "Messaging Platform Integration"
+    ]
+  },
+  {
+    title: "🐍 Python Development",
+    icon: "Terminal",
+    services: [
+      "Python Software Development",
+      "Python Automation Scripts",
+      "Web Scraping",
+      "Data Scraping",
+      "Browser Automation",
+      "API Integration",
+      "Data Processing"
+    ]
+  },
+  {
+    title: "🌐 DevOps & Deployment",
+    icon: "Server",
+    services: [
+      "Linux Server Administration",
+      "Ubuntu Server Setup",
+      "Nginx Configuration",
+      "Web Application Deployment",
+      "SSH Configuration",
+      "Git & GitHub Workflow",
+      "CI/CD Pipeline Setup (Basic)",
+      "Docker Containerization"
+    ]
+  },
+  {
+    title: "🎨 Design Services",
+    icon: "Palette",
+    services: [
+      "Brand Identity Design",
+      "Logo Design",
+      "Visual Identity Design",
+      "Graphic Design",
+      "Web Design",
+      "UI/UX Design",
+      "Presentation Design",
+      "Marketing Graphics"
+    ]
+  },
+  {
+    title: "📊 Data & Research",
+    icon: "BarChart",
+    services: [
+      "Data Collection",
+      "Data Cleaning",
+      "Data Extraction",
+      "Web Data Mining",
+      "Research Support",
+      "AI Dataset Preparation"
+    ]
+  },
+  {
+    title: "🔍 Quality Assurance",
+    icon: "Search",
+    services: [
+      "Software Testing",
+      "Website Testing",
+      "AI Model Evaluation",
+      "Bug Identification",
+      "Performance Testing"
+    ]
+  }
+];
