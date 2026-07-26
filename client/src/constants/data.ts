@@ -47,7 +47,7 @@ export const personalInfo: PersonalInfo = {
   title: "Software Engineer & Data Analyst",
   email: "ezekiel.gwamna@hotmail.com",
   phone: "+2349080000236",
-  location: "No. 4 Amina Abubakar Close, Katampe Extension, Abuja, FCT",
+  location: "#8 Dalhatu Maccido Street, Katampe Extension Abuja, FCT, Nigeria",
   bio: "Innovative Software Engineer with strong expertise in back-end development and AI-powered solutions, complemented by specialized knowledge in global health systems. Adept at leveraging artificial intelligence tools and data analysis to solve complex problems and build impactful technology solutions.",
   resumeUrl: "/resume.pdf",
   githubUrl: "https://github.com/izzymarc",
