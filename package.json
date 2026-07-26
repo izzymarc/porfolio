@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Portfolio website",
   "scripts": {
-    "build": "cd client && npm install && npm run build",
+    "build": "cd client && npm install && npm run build && cd .. && mkdir -p dist && cp -R client/dist/public dist/public",
     "dev": "cd client && npm run dev",
     "preview": "cd client && npm run preview"
   },
