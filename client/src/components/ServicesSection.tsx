@@ -10,6 +10,7 @@ import {
   Palette,
   BarChart3,
   Search,
+  Heart,
   ChevronDown,
   CheckCircle2,
 } from "lucide-react";
@@ -25,6 +26,7 @@ const iconMap: Record<string, React.ElementType> = {
   Palette,
   BarChart: BarChart3,
   Search,
+  Heart,
 };
 
 const ServicesSection = () => {

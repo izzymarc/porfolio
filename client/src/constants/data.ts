@@ -44,48 +44,73 @@ export interface PersonalInfo {
 
 export const personalInfo: PersonalInfo = {
   name: "Ezekiel Funom Gwamna",
-  title: "Full Stack Developer",
+  title: "Software Engineer & Data Analyst",
   email: "ezekiel.gwamna@hotmail.com",
   phone: "+2349080000236",
-  location: "Abuja Nigeria #8 Dalhatu Maccido Street, Katampe Extension Abuja, FCT, Nigeria",
-  bio: "Full-stack software engineer with over 7 years of experience designing and developing web applications across various domains including e-commerce, fintech, and digital marketing. Skilled in artificial intelligence and machine learning technologies with a focus on practical applications.",
+  location: "No. 4 Amina Abubakar Close, Katampe Extension, Abuja, FCT",
+  bio: "Innovative Software Engineer with strong expertise in back-end development and AI-powered solutions, complemented by specialized knowledge in global health systems. Adept at leveraging artificial intelligence tools and data analysis to solve complex problems and build impactful technology solutions.",
   resumeUrl: "/resume.pdf",
   githubUrl: "https://github.com/izzymarc",
-  linkedinUrl: "https://linkedin.com/in/izzymarc",
-  twitterUrl: "https://twitter.com/izzymarc",
-  availability: "Available for freelance work and full-time positions",
-  about: "I am a dedicated Full Stack Developer with a passion for creating efficient, scalable, and user-friendly web applications. With a strong foundation in both front-end and back-end development, I strive to deliver high-quality solutions that meet client needs and exceed expectations.",
+  linkedinUrl: "https://linkedin.com/in/ezekiel-funom-gwamna3b3060159",
+  twitterUrl: "https://twitter.com/ezekielgwamna",
+  availability: "Available for immediate start or with standard notice period",
+  about: "I am a Software Engineer and Data Analyst with a passion for back-end development, AI-powered solutions, and global health systems. Currently completing my B.Sc. in Computer Science, I combine technical expertise with practical experience in data analysis, API design, and project management to deliver measurable results across diverse domains.",
   education: [
     {
-      degree: "Bachelor of Science in Computer Science",
-      institution: "University of Abuja",
-      year: "2018-2022"
+      degree: "B.Sc. Computer Science (400 Level)",
+      institution: "National Open University of Nigeria (NOUN)",
+      year: "Expected 2026"
+    },
+    {
+      degree: "ALX Software Engineering Program",
+      institution: "ALX Africa",
+      year: "Completed Nov 2024"
     }
   ],
   experience: [
     {
-      title: "Senior Full Stack Developer",
-      company: "Tech Solutions Inc.",
+      title: "Software Engineer",
+      company: "Freelance & Contract",
       period: "2022-Present",
-      description: "Leading the development of enterprise-level web applications using React, Node.js, and TypeScript."
+      description: "Designing and developing back-end systems and REST APIs using Python (Flask) and Node.js. Building AI-powered automation tools and data pipelines. Collaborating with clients on full-stack web applications and database optimization."
     },
     {
-      title: "Full Stack Developer",
-      company: "Digital Innovations Ltd",
-      period: "2021-2022",
-      description: "Developed and maintained multiple client projects, focusing on responsive design and optimal performance."
+      title: "ALX Software Engineering Trainee",
+      company: "ALX Africa",
+      period: "2023-2024",
+      description: "Completed intensive full-stack software engineering training covering back-end development, API design, database modeling, version control (Git/GitHub), Agile methodologies, and collaborative software development."
     }
   ],
   certifications: [
     {
-      name: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      year: "2023"
+      name: "Forage (Citi) Software Dev Simulation",
+      issuer: "Forage — Certificate ID: aeojn4g3GDLYu2DaH",
+      year: "2025"
     },
     {
-      name: "Professional Full Stack Developer",
-      issuer: "Meta",
-      year: "2022"
+      name: "Certified Cryptocurrency Trader",
+      issuer: "Blockchain Council",
+      year: "2019"
+    },
+    {
+      name: "Leadership and Management in Health",
+      issuer: "University of Washington",
+      year: "2025"
+    },
+    {
+      name: "Economic Evaluation in Global Health",
+      issuer: "University of Washington",
+      year: "2024"
+    },
+    {
+      name: "Project Management in Global Health",
+      issuer: "University of Washington",
+      year: "2024"
+    },
+    {
+      name: "Monitoring and Evaluation in Global Health",
+      issuer: "University of Washington",
+      year: "2024"
     }
   ],
   socialLinks: [
@@ -96,7 +121,7 @@ export const personalInfo: PersonalInfo = {
     },
     {
       name: "LinkedIn",
-      url: "https://linkedin.com/in/ezekielgwamna",
+      url: "https://linkedin.com/in/ezekiel-funom-gwamna3b3060159",
       icon: Linkedin
     },
     {
@@ -114,20 +139,21 @@ export const personalInfo: PersonalInfo = {
 
 export const about = {
   description: [
-    "I'm a passionate Full Stack Software Engineer with 5+ years of experience building web applications and digital solutions. My journey in technology began at the University of Technology, where I earned my Bachelor's degree in Computer Science.",
-    "Throughout my career, I've worked with various teams and clients, from startups to enterprises, helping them bring their digital products to life. I specialize in React.js, Node.js, and cloud technologies, with a focus on creating scalable and maintainable solutions."
+    "I'm an innovative Software Engineer and Data Analyst with strong expertise in back-end development using Python (Flask) and Node.js, complemented by specialized knowledge in global health systems and AI-powered solutions.",
+    "My technical journey includes completing the ALX Software Engineering Program and pursuing a B.Sc. in Computer Science at the National Open University of Nigeria. I combine practical software engineering skills with certifications in global health from the University of Washington, enabling me to bridge technology and public health.",
+    "I specialize in building REST APIs, designing scalable databases, and leveraging AI tools for process automation. My work spans web application development, data analysis, and creating technology solutions that address real-world challenges."
   ],
   education: {
-    degree: "Bachelor of Science in Computer Science",
-    institution: "University of Technology",
-    year: "2018"
+    degree: "B.Sc. Computer Science (in progress)",
+    institution: "National Open University of Nigeria (NOUN)",
+    year: "Expected 2026"
   },
   experience: {
-    position: "Senior Software Engineer",
-    company: "Globalsync Technologies",
-    period: "2020-Present"
+    position: "Software Engineer",
+    company: "Freelance & Contract",
+    period: "2022-Present"
   },
-  interests: ["Open Source", "Cloud Computing", "AI"]
+  interests: ["Back-End Development", "AI & Automation", "Global Health Systems", "Data Analysis", "API Design", "Blockchain"]
 };
 
 export type Skill = {
@@ -137,44 +163,44 @@ export type Skill = {
 
 export const skills = {
   frontend: [
-    { name: "React.js", percentage: 90 },
-    { name: "JavaScript (ES6+)", percentage: 95 },
-    { name: "CSS/SASS", percentage: 85 },
-    { name: "TypeScript", percentage: 80 }
+    { name: "React.js", percentage: 85 },
+    { name: "JavaScript (ES6+)", percentage: 90 },
+    { name: "HTML5/CSS3", percentage: 90 },
+    { name: "TypeScript", percentage: 75 }
   ],
   backend: [
-    { name: "Node.js", percentage: 85 },
-    { name: "Express.js", percentage: 90 },
-    { name: "MongoDB", percentage: 80 },
-    { name: "SQL/PostgreSQL", percentage: 75 }
+    { name: "Python (Flask)", percentage: 90 },
+    { name: "Node.js/Express.js", percentage: 85 },
+    { name: "REST API Design", percentage: 90 },
+    { name: "SQL/PostgreSQL", percentage: 80 }
   ],
   artificialIntelligence: [
-    { name: "Machine Learning", percentage: 85 },
-    { name: "Natural Language Processing", percentage: 80 },
-    { name: "Computer Vision", percentage: 75 },
-    { name: "Deep Learning", percentage: 70 }
+    { name: "AI Prompt Engineering", percentage: 85 },
+    { name: "AI Tools & Automation", percentage: 80 },
+    { name: "Data Analysis & BI", percentage: 75 },
+    { name: "Machine Learning", percentage: 65 }
   ],
   devTools: [
     "Git & GitHub",
-    "Command Line",
-    "AWS",
     "VS Code",
-    "Webpack"
+    "Docker",
+    "Agile/Scrum",
+    "Linux/Ubuntu"
   ],
   libraries: [
-    "Redux",
-    "Next.js",
+    "Flask",
+    "React",
     "Tailwind CSS",
-    "Material UI",
-    "Jest",
-    "GraphQL"
+    "Pandas",
+    "NumPy",
+    "REST APIs"
   ],
   softSkills: [
-    "Team Collaboration",
-    "Time Management",
-    "Communication",
+    "Stakeholder Management",
+    "Agile Delivery",
+    "Mentoring",
     "Problem Solving",
-    "Leadership"
+    "Communication"
   ]
 };
 
@@ -424,6 +450,20 @@ export const servicesData: ServiceCategory[] = [
       "AI Model Evaluation",
       "Bug Identification",
       "Performance Testing"
+    ]
+  },
+  {
+    title: "🏥 Global Health Systems",
+    icon: "Heart",
+    services: [
+      "Health Data Management Systems",
+      "Monitoring & Evaluation Frameworks",
+      "DALY Calculations & Health Metrics",
+      "Budget Impact Analysis",
+      "Economic Evaluation in Health",
+      "Digital Health Interventions",
+      "Health Systems Strengthening",
+      "Public Health Program Evaluation"
     ]
   }
 ];

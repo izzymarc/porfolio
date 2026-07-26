@@ -202,16 +202,16 @@ const AboutSection = () => {
                   content: about.experience.position,
                   subcontent: `${about.experience.company}, ${about.experience.period}`
                 },
-                {
-                  icon: MapPin,
-                  title: "Workplace",
-                  content: "Globalsync Technologies"
-                },
-                {
-                  icon: MapPin,
-                  title: "Location",
-                  content: personalInfo.location
-                }
+                 {
+                   icon: MapPin,
+                   title: "Location",
+                   content: personalInfo.location
+                 },
+                 {
+                   icon: MessageCircle,
+                   title: "Languages",
+                   content: "English & Hausa (Fluent)"
+                 }
               ].map((item, index) => (
                 <motion.div 
                   key={index}
