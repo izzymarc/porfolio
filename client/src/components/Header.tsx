@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Home, User, Briefcase, Code, BookOpen, FileText, Mail, Github, Linkedin, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { personalInfo } from "@/constants/data";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -94,6 +95,7 @@ const Header = () => {
               );
             })}
             <div className="flex items-center space-x-4">
+              <ThemeToggle />
               {socialLinks.map((link) => {
                 const Icon = link.icon;
                 return (
@@ -112,7 +114,8 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center space-x-4 md:hidden">
+            <div className="flex items-center space-x-4 md:hidden">
+            <ThemeToggle />
             <Button
               variant="ghost"
               size="icon"
