@@ -22,41 +22,41 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: "1",
-    title: "Getting Started with React and TypeScript",
-    excerpt: "Learn how to set up a new React project with TypeScript and best practices for type safety.",
-    date: "2024-03-15",
-    readTime: "5 min read",
-    author: "John Doe",
+    title: "Building REST APIs with Python Flask — A Practical Guide",
+    excerpt: "Learn how to design and deploy production-ready REST APIs using Flask, with best practices for authentication, error handling, and database integration.",
+    date: "2026-07-20",
+    readTime: "7 min read",
+    author: "Ezekiel Funom Gwamna",
     category: "Development",
-    tags: ["React", "TypeScript", "Web Development"],
-    imageUrl: "/blog/react-typescript.jpg"
+    tags: ["Python", "Flask", "REST API", "Backend"],
+    imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80"
   },
   {
     id: "2",
-    title: "The Future of Web Development",
-    excerpt: "Explore upcoming trends and technologies that are shaping the future of web development.",
-    date: "2024-03-10",
-    readTime: "8 min read",
-    author: "Jane Smith",
-    category: "Technology",
-    tags: ["Web Development", "Future Tech", "Trends"],
-    imageUrl: "/blog/future-web.jpg"
+    title: "AI-Powered Automation — Practical Use Cases for Developers",
+    excerpt: "Explore how AI tools and prompt engineering can streamline your development workflow, from code generation to automated testing.",
+    date: "2026-07-10",
+    readTime: "5 min read",
+    author: "Ezekiel Funom Gwamna",
+    category: "AI & Automation",
+    tags: ["AI", "Automation", "Prompt Engineering", "Productivity"],
+    imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80"
   },
   {
     id: "3",
-    title: "Building Scalable Applications",
-    excerpt: "Best practices and patterns for building scalable web applications that can handle growth.",
-    date: "2024-03-05",
+    title: "Global Health Systems & Technology — Bridging the Gap",
+    excerpt: "How digital health interventions and data-driven M&E frameworks are transforming healthcare delivery in low-resource settings.",
+    date: "2026-06-25",
     readTime: "6 min read",
-    author: "Mike Johnson",
-    category: "Architecture",
-    tags: ["Scalability", "Architecture", "Best Practices"],
-    imageUrl: "/blog/scalable-apps.jpg"
+    author: "Ezekiel Funom Gwamna",
+    category: "Global Health",
+    tags: ["Global Health", "Digital Health", "M&E", "Data Analysis"],
+    imageUrl: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80"
   }
 ];
 
-const categories = ["All", "Development", "Technology", "Architecture", "Design"];
-const tags = ["React", "TypeScript", "Web Development", "Future Tech", "Trends", "Scalability", "Architecture", "Best Practices", "Design"];
+const categories = ["All", "Development", "AI & Automation", "Global Health", "Technology"];
+const tags = ["Python", "Flask", "REST API", "Backend", "AI", "Automation", "Prompt Engineering", "Productivity", "Global Health", "Digital Health", "M&E", "Data Analysis"];
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState("");

@@ -54,7 +54,7 @@ export const personalInfo: PersonalInfo = {
   linkedinUrl: "https://linkedin.com/in/ezekiel-funom-gwamna3b3060159",
   twitterUrl: "https://twitter.com/ezekielgwamna",
   availability: "Available for immediate start or with standard notice period",
-  about: "I am a Software Engineer and Data Analyst with a passion for back-end development, AI-powered solutions, and global health systems. Currently completing my B.Sc. in Computer Science, I combine technical expertise with practical experience in data analysis, API design, and project management to deliver measurable results across diverse domains.",
+  about: "I am a Software Engineer and Data Analyst with a B.Sc. in Computer Science from the National Open University of Nigeria and an ALX Software Engineering certification. I combine strong back-end development skills with AI-powered solutions and specialized knowledge in global health systems to deliver measurable results across diverse domains.",
   education: [
     {
       degree: "B.Sc. Computer Science",
@@ -140,7 +140,7 @@ export const personalInfo: PersonalInfo = {
 export const about = {
   description: [
     "I'm an innovative Software Engineer and Data Analyst with strong expertise in back-end development using Python (Flask) and Node.js, complemented by specialized knowledge in global health systems and AI-powered solutions.",
-    "My technical journey includes completing the ALX Software Engineering Program and pursuing a B.Sc. in Computer Science at the National Open University of Nigeria. I combine practical software engineering skills with certifications in global health from the University of Washington, enabling me to bridge technology and public health.",
+    "My technical journey includes completing the ALX Software Engineering Program and earning a B.Sc. in Computer Science from the National Open University of Nigeria. I combine practical software engineering skills with certifications in global health from the University of Washington, enabling me to bridge technology and public health.",
     "I specialize in building REST APIs, designing scalable databases, and leveraging AI tools for process automation. My work spans web application development, data analysis, and creating technology solutions that address real-world challenges."
   ],
   education: {
