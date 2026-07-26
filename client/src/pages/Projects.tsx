@@ -101,16 +101,14 @@ const ProjectsPage = () => {
   }, [searchTerm, selectedCategory]);
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <main className="flex-grow pt-16 sm:pt-24 pb-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-8 sm:mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">My Projects</h2>
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <motion.div 
+        className="text-center mb-8 sm:mb-16"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">My Projects</h1>
             <div className="h-1 w-20 bg-primary mx-auto mt-3 sm:mt-4 mb-4 sm:mb-8 rounded-full"></div>
             <p className="max-w-3xl mx-auto text-sm sm:text-base text-muted-foreground px-4">
               Explore my latest projects and applications. Each project represents my commitment to clean code, 
@@ -203,8 +201,6 @@ const ProjectsPage = () => {
               <Link to="/contact">Get in Touch</Link>
             </Button>
           </motion.div>
-        </div>
-      </main>
     </div>
   );
 };
