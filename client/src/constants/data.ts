@@ -57,9 +57,9 @@ export const personalInfo: PersonalInfo = {
   about: "I am a Software Engineer and Data Analyst with a passion for back-end development, AI-powered solutions, and global health systems. Currently completing my B.Sc. in Computer Science, I combine technical expertise with practical experience in data analysis, API design, and project management to deliver measurable results across diverse domains.",
   education: [
     {
-      degree: "B.Sc. Computer Science (400 Level)",
+      degree: "B.Sc. Computer Science",
       institution: "National Open University of Nigeria (NOUN)",
-      year: "Expected 2026"
+      year: "2026"
     },
     {
       degree: "ALX Software Engineering Program",
@@ -144,9 +144,9 @@ export const about = {
     "I specialize in building REST APIs, designing scalable databases, and leveraging AI tools for process automation. My work spans web application development, data analysis, and creating technology solutions that address real-world challenges."
   ],
   education: {
-    degree: "B.Sc. Computer Science (in progress)",
+    degree: "B.Sc. Computer Science",
     institution: "National Open University of Nigeria (NOUN)",
-    year: "Expected 2026"
+    year: "2026"
   },
   experience: {
     position: "Software Engineer",
