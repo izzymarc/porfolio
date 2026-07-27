@@ -148,7 +148,7 @@ const AboutSection = () => {
                 <img 
                   src={profileImage} 
                   alt="Ezekiel Funom Gwamna" 
-                  className="rounded-lg shadow-lg w-full object-cover object-top h-80 md:h-96 relative z-10 transition-transform duration-300 group-hover:scale-105"
+                  className="rounded-lg shadow-lg w-full h-80 md:h-96 object-cover object-[center_20%] relative z-10 transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
             </motion.div>
