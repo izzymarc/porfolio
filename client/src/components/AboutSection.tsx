@@ -141,14 +141,14 @@ const AboutSection = () => {
                   ease: "easeInOut",
                 }}
               />
-              <div className="relative overflow-hidden rounded-lg">
+              <div className="relative rounded-lg shadow-lg w-full h-80 md:h-96 bg-muted z-10 overflow-hidden">
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20"
                 />
                 <img 
                   src={profileImage} 
                   alt="Ezekiel Funom Gwamna" 
-                  className="rounded-lg shadow-lg w-full h-80 md:h-96 object-cover object-[center_20%] relative z-10 transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-full object-cover object-center rounded-lg transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
             </motion.div>
