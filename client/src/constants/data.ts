@@ -49,7 +49,7 @@ export const personalInfo: PersonalInfo = {
   phone: "+2349080000236",
   location: "No. 4 Amina Abubakar Close, Katampe Extension, Abuja, FCT",
   bio: "Innovative Software Engineer with strong expertise in back-end development and AI-powered solutions, complemented by specialized training in global health systems and leadership. Combines systems thinking and strategic planning with hands-on technical skills to design impactful, scalable technology solutions. Experienced in multidisciplinary collaboration across engineering and public health contexts, with a consistent focus on evidence-based, data-driven approaches to solving complex problems and supporting organizational change.",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/resume.docx",
   githubUrl: "https://github.com/izzymarc",
   linkedinUrl: "https://linkedin.com/in/ezekiel-funom-gwamna3b3060159",
   twitterUrl: "https://twitter.com/ezekielgwamna",
