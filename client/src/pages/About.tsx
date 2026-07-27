@@ -2,10 +2,11 @@ import { motion } from "framer-motion";
 import { personalInfo } from "@/constants/data";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
+import profileImage from "@/assets/images/profile.jpg";
 
 const About = () => {
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -17,6 +18,21 @@ const About = () => {
             About Me
           </h1>
           <div className="h-1 w-20 bg-primary mx-auto mb-6 rounded-full"></div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="mb-12 flex justify-center"
+        >
+          <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full bg-muted overflow-hidden shadow-lg">
+            <img
+              src={profileImage}
+              alt="Ezekiel Funom Gwamna"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -108,4 +124,4 @@ const About = () => {
   );
 };
 
-export default About; 
+export default About;
