@@ -47,19 +47,19 @@ export const personalInfo: PersonalInfo = {
   title: "Software Engineer & Data Analyst",
   email: "ezekiel.gwamna@hotmail.com",
   phone: "+2349080000236",
-  location: "#8 Dalhatu Maccido Street, Katampe Extension Abuja, FCT, Nigeria",
-  bio: "Innovative Software Engineer with strong expertise in back-end development and AI-powered solutions, complemented by specialized knowledge in global health systems. Adept at leveraging artificial intelligence tools and data analysis to solve complex problems and build impactful technology solutions.",
+  location: "No. 4 Amina Abubakar Close, Katampe Extension, Abuja, FCT",
+  bio: "Innovative Software Engineer with strong expertise in back-end development and AI-powered solutions, complemented by specialized training in global health systems and leadership. Combines systems thinking and strategic planning with hands-on technical skills to design impactful, scalable technology solutions. Experienced in multidisciplinary collaboration across engineering and public health contexts, with a consistent focus on evidence-based, data-driven approaches to solving complex problems and supporting organizational change.",
   resumeUrl: "/resume.pdf",
   githubUrl: "https://github.com/izzymarc",
   linkedinUrl: "https://linkedin.com/in/ezekiel-funom-gwamna3b3060159",
   twitterUrl: "https://twitter.com/ezekielgwamna",
   availability: "Available for immediate start or with standard notice period",
-  about: "I am a Software Engineer and Data Analyst with a B.Sc. in Computer Science from the National Open University of Nigeria and an ALX Software Engineering certification. I combine strong back-end development skills with AI-powered solutions and specialized knowledge in global health systems to deliver measurable results across diverse domains.",
+  about: "I am a Software Engineer and Data Analyst currently completing my B.Sc. in Computer Science at the National Open University of Nigeria, with an ALX Software Engineering certification. I bring together strong back-end development skills, AI-powered solutions, and specialized training in global health systems and leadership to deliver impactful, scalable technology solutions.",
   education: [
     {
-      degree: "B.Sc. Computer Science",
+      degree: "B.Sc. Computer Science (400 Level)",
       institution: "National Open University of Nigeria (NOUN)",
-      year: "2026"
+      year: "Expected Q1 2026"
     },
     {
       degree: "ALX Software Engineering Program",
@@ -91,6 +91,16 @@ export const personalInfo: PersonalInfo = {
       name: "Certified Cryptocurrency Trader",
       issuer: "Blockchain Council",
       year: "2019"
+    },
+    {
+      name: "Transforming Your Leadership and Management Skills",
+      issuer: "University of Washington",
+      year: "2026"
+    },
+    {
+      name: "Redesigning Global Health",
+      issuer: "University of Washington",
+      year: "2026"
     },
     {
       name: "Leadership and Management in Health",
@@ -139,21 +149,21 @@ export const personalInfo: PersonalInfo = {
 
 export const about = {
   description: [
-    "I'm an innovative Software Engineer and Data Analyst with strong expertise in back-end development using Python (Flask) and Node.js, complemented by specialized knowledge in global health systems and AI-powered solutions.",
-    "My technical journey includes completing the ALX Software Engineering Program and earning a B.Sc. in Computer Science from the National Open University of Nigeria. I combine practical software engineering skills with certifications in global health from the University of Washington, enabling me to bridge technology and public health.",
-    "I specialize in building REST APIs, designing scalable databases, and leveraging AI tools for process automation. My work spans web application development, data analysis, and creating technology solutions that address real-world challenges."
+    "I'm an innovative Software Engineer and Data Analyst with strong expertise in back-end development using Python (Flask) and Node.js, complemented by specialized training in global health systems and leadership.",
+    "My technical journey includes completing the ALX Software Engineering Program and pursuing a B.Sc. in Computer Science at the National Open University of Nigeria. I combine practical software engineering skills with certifications in global health from the University of Washington, enabling me to bridge technology and public health.",
+    "I specialize in building REST APIs, designing scalable databases, and leveraging AI tools for process automation. My work is grounded in systems thinking and evidence-based, data-driven approaches to solving complex problems and supporting organizational change."
   ],
   education: {
-    degree: "B.Sc. Computer Science",
+    degree: "B.Sc. Computer Science (in progress)",
     institution: "National Open University of Nigeria (NOUN)",
-    year: "2026"
+    year: "Expected Q1 2026"
   },
   experience: {
     position: "Software Engineer",
     company: "Freelance & Contract",
     period: "2022-Present"
   },
-  interests: ["Back-End Development", "AI & Automation", "Global Health Systems", "Data Analysis", "API Design", "Blockchain"]
+  interests: ["Back-End Development", "AI & Automation", "Global Health Systems", "Data Analysis", "API Design", "Leadership & Management", "Blockchain"]
 };
 
 export type Skill = {
@@ -196,8 +206,11 @@ export const skills = {
     "REST APIs"
   ],
   softSkills: [
+    "Leadership & Strategic Planning",
     "Stakeholder Management",
     "Agile Delivery",
+    "Change Management",
+    "Cross-Functional Collaboration",
     "Mentoring",
     "Problem Solving",
     "Communication"
