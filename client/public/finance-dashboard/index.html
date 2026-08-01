@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Analytics Dashboard — Demo</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: linear-gradient(135deg, #0f172a, #1e293b); color: #e2e8f0; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+    .container { max-width: 900px; margin: 2rem; padding: 3rem; background: rgba(30,41,59,0.8); border-radius: 16px; border: 1px solid rgba(100,116,139,0.3); backdrop-filter: blur(10px); }
+    .badge { display: inline-block; background: rgba(34,197,94,0.2); color: #4ade80; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; margin: 4px; }
+    h1 { font-size: 2.5rem; background: linear-gradient(135deg, #4ade80, #22d3ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .tagline { color: #94a3b8; font-size: 1.1rem; margin-bottom: 2rem; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; }
+    .feature { background: rgba(15,23,42,0.6); padding: 1rem; border-radius: 10px; border: 1px solid rgba(100,116,139,0.2); }
+    .feature h3 { color: #4ade80; font-size: 0.9rem; margin-bottom: 0.3rem; }
+    .feature p { color: #94a3b8; font-size: 0.8rem; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; text-align: center; }
+    .stat h2 { font-size: 1.8rem; color: #4ade80; }
+    .stat p { color: #94a3b8; font-size: 0.8rem; }
+    .btn { display: inline-block; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px; transition: all 0.2s; }
+    .btn-primary { background: #22c55e; color: white; } .btn-primary:hover { background: #16a34a; }
+    .btn-outline { border: 1px solid rgba(100,116,139,0.5); color: #e2e8f0; } .btn-outline:hover { border-color: #4ade80; color: #4ade80; }
+    .demo-preview { background: rgba(15,23,42,0.8); border-radius: 10px; padding: 1.5rem; margin: 2rem 0; text-align: center; border: 1px dashed rgba(100,116,139,0.3); }
+  </style>
+</head>
+<body><div class="container">
+  <div class="tech-stack"><span class="badge">React</span><span class="badge">D3.js</span><span class="badge">Python</span><span class="badge">FastAPI</span><span class="badge">TimescaleDB</span><span class="badge">Prophet</span></div>
+  <h1>📊 Financial Analytics Dashboard</h1>
+  <p class="tagline">Real-time market data, interactive D3.js charts, and ML-powered predictive analytics for investment decision-making.</p>
+  <div class="features">
+    <div class="feature"><h3>📈 Live Charts</h3><p>Candlestick, line, heatmap with D3.js & Recharts</p></div>
+    <div class="feature"><h3>🔮 Predictions</h3><p>ARIMA, Prophet & LSTM time-series forecasting</p></div>
+    <div class="feature"><h3>📋 Portfolio Tracker</h3><p>Holdings, P&L, allocation & performance attribution</p></div>
+    <div class="feature"><h3>⚠️ Risk Analytics</h3><p>VaR, CVaR, Sharpe ratio, beta & correlation matrix</p></div>
+    <div class="feature"><h3>🔔 Custom Alerts</h3><p>Price, volume & volatility-based notifications</p></div>
+    <div class="feature"><h3>💱 Multi-Asset</h3><p>Equities, forex, commodities & crypto</p></div>
+  </div>
+  <div class="stats"><div class="stat"><h2>25%</h2><p>Return Improvement</p></div><div class="stat"><h2>20+</h2><p>Firms Using It</p></div><div class="stat"><h2>500+</h2><p>Daily Active Users</p></div></div>
+  <div class="demo-preview"><p style="color: #94a3b8; margin-bottom: 1rem;">🚧 Full interactive demo coming soon.</p><a href="https://github.com/izzymarc/finance-dashboard" class="btn btn-primary" target="_blank">📂 View on GitHub</a><a href="https://github.com/izzymarc/finance-dashboard#-setup-instructions" class="btn btn-outline" target="_blank">🔧 Setup Guide</a></div>
+</div></body></html>
