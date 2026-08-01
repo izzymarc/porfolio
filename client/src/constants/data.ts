@@ -247,7 +247,7 @@ export const projects: Project[] = [
     impact: "Helped 50+ small businesses increase their online sales by an average of 40%. The platform currently processes over 1000 orders per month with a 99.9% uptime.",
     technologies: ["React", "Node.js", "Express", "MongoDB", "WebSocket", "Stripe", "Redis", "Docker"],
     imageUrl: "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80",
-    demoUrl: "https://ecommerce-demo.example.com",
+    demoUrl: "https://ezekielgwamna.me/ecommerce/",
     sourceUrl: "https://github.com/izzymarc/ecommerce",
     metrics: [
       {
@@ -280,7 +280,7 @@ export const projects: Project[] = [
     impact: "Reduced content processing time by 60% for clients. Improved content engagement rates by an average of 35% through AI-powered optimization suggestions.",
     technologies: ["Python", "TensorFlow", "React", "FastAPI", "PostgreSQL", "AWS", "Docker"],
     imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80",
-    demoUrl: "https://ai-cms-demo.example.com",
+    demoUrl: "https://ezekielgwamna.me/ai-cms/",
     sourceUrl: "https://github.com/izzymarc/ai-cms",
     metrics: [
       {
@@ -313,7 +313,7 @@ export const projects: Project[] = [
     impact: "Helped clients improve investment returns by 25% through better data visualization and predictive insights. Now used by 20+ investment firms.",
     technologies: ["React", "D3.js", "Python", "FastAPI", "PostgreSQL", "Redis", "AWS"],
     imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    demoUrl: "https://finance-dashboard-demo.example.com",
+    demoUrl: "https://ezekielgwamna.me/finance-dashboard/",
     sourceUrl: "https://github.com/izzymarc/finance-dashboard",
     metrics: [
       {
