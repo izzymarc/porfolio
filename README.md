@@ -10,10 +10,10 @@ A modern, responsive portfolio website for Ezekiel Funom Gwamna, Software Engine
 - **Data/Forms**: TanStack Query, React Hook Form, Zod
 - **Charts**: Recharts
 - **Contact form**: EmailJS (client-side, no backend required)
-- **Hosting**: Netlify
+- **Hosting**: Cloudflare Pages (auto-deploys on push to `main`)
 
 An Express + Drizzle server lives in `server/` from an earlier iteration. It is **not**
-part of the deployed build — Netlify builds the `client/` directory only.
+part of the deployed build — Cloudflare builds the client only.
 
 ## Features
 
@@ -52,7 +52,7 @@ a single file: `client/src/constants/data.ts`.
 
 ### Prerequisites
 
-- Node.js 18+ (Netlify builds with 18.19.0, pinned in `netlify.toml`)
+- Node.js 18+ (Cloudflare Pages builds with Node 18)
 - npm
 
 ### Development
@@ -85,7 +85,8 @@ npm run preview
 
 ## Environment Variables
 
-The contact form needs these set in Netlify (Site settings → Environment variables):
+The contact form needs these set in the Cloudflare Pages project
+(Settings → Environment variables):
 
 | Variable | Purpose |
 | --- | --- |
@@ -100,19 +101,38 @@ private key or secret in a `VITE_`-prefixed variable — it ships to the browser
 
 ## Deployment
 
-Netlify builds from `netlify.toml`:
+### Main site — Cloudflare Pages
 
-- **Base directory**: `client`
+The portfolio is hosted on **Cloudflare Pages** at `ezekielgwamna.pages.dev`, connected
+directly to this GitHub repo (`izzymarc/porfolio`). Pushing to `main` triggers an
+automatic build and deploy — there is no manual deploy step.
+
+Build settings configured in the Cloudflare dashboard:
+
 - **Build command**: `npm run build`
-- **Publish directory**: `dist/public`
-- **Node version**: `18.19.0`
+- **Build output directory**: `dist/public`
+- **Production branch**: `main`
+- **Node version**: `18`
 
-Push to `main` and Netlify deploys automatically.
+Client-side routing is handled by `_redirects` (`/* /index.html 200`), and security
+plus caching headers come from `_headers`. Both live in `client/public/public/` and are
+emitted to the root of the build output. See `CLOUDFLARE_DEPLOYMENT.md` for full setup.
 
-### Demo Projects
+### Demo projects — Netlify
 
-The three showcased projects deploy as separate Netlify sites, linked from
-`demoUrl` fields in `client/src/constants/data.ts`.
+The three showcased projects are **separate repositories** deployed independently on
+Netlify. The portfolio links out to them via the `demoUrl` fields in
+`client/src/constants/data.ts`:
+
+| Project | Repository | Live demo |
+| --- | --- | --- |
+| E-Commerce (ShopSphere) | `izzymarc/ecommerce` | `grand-marzipan-bfe7f4.netlify.app` |
+| AI Content Manager | `izzymarc/ai-cms` | `timely-mochi-688563.netlify.app` |
+| Finance Dashboard | `izzymarc/finance-dashboard` | `gilded-kringle-e999bc.netlify.app` |
+
+Each of those repos owns its own `netlify.toml` and Netlify site ID. Nothing in this
+repository deploys to Netlify — the root `netlify.toml` here is a leftover from an
+earlier hosting experiment.
 
 ## License
 
