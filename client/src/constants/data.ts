@@ -241,26 +241,26 @@ export const projects: Project[] = [
     title: "E-commerce Platform",
     category: "Full Stack",
     description: "A modern e-commerce platform built with React and Node.js, featuring real-time inventory management and seamless payment processing.",
-    problem: "Small businesses needed an affordable, scalable e-commerce solution that could handle real-time inventory updates and provide a smooth checkout experience.",
-    approach: "Implemented a microservices architecture using Node.js for better scalability, with React for the frontend. Used WebSocket for real-time inventory updates and integrated Stripe for secure payments.",
-    solution: "Developed a full-featured e-commerce platform with real-time inventory tracking, automated order processing, and analytics dashboard for business owners.",
-    impact: "Helped 50+ small businesses increase their online sales by an average of 40%. The platform currently processes over 1000 orders per month with a 99.9% uptime.",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "WebSocket", "Stripe", "Redis", "Docker"],
+    problem: "Building a credible storefront means handling far more than a product list — search, filtering, cart state, wishlists, and a multi-step checkout all have to work together without the UI becoming unmanageable.",
+    approach: "Built the frontend in React with TypeScript and Vite, using Zustand for cart and wishlist state so updates stay predictable across routes. Styled with Tailwind CSS and structured the catalog around a typed product model to keep filtering and search logic straightforward.",
+    solution: "Delivered an eight-page storefront covering home, shop, product detail, cart, checkout, wishlist, orders and account, with mega-menu navigation, live search, category filtering and a persistent mini-cart.",
+    impact: "Built as a portfolio reference implementation rather than a commercial deployment. The storefront demonstrates a complete purchase journey — browse, filter, add to cart, checkout — backed by a 23-product sample catalog across four categories, with cart and wishlist state persisted client-side.",
+    technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Zustand", "React Router", "Node.js", "Express"],
     imageUrl: "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80",
     demoUrl: "https://grand-marzipan-bfe7f4.netlify.app",
     sourceUrl: "https://github.com/izzymarc/ecommerce",
     metrics: [
       {
-        label: "Increase in Sales",
-        value: "40%"
+        label: "Sample Catalog",
+        value: "23 products"
       },
       {
-        label: "Active Users",
-        value: "5000+"
+        label: "Storefront Pages",
+        value: "8"
       },
       {
-        label: "Uptime",
-        value: "99.9%"
+        label: "Bundle Size (gzip)",
+        value: "75 kB"
       }
     ],
     gallery: [
@@ -273,27 +273,27 @@ export const projects: Project[] = [
   {
     title: "AI-Powered Content Manager",
     category: "Machine Learning",
-    description: "An intelligent content management system that uses AI to automatically categorize, tag, and optimize content for better engagement.",
-    problem: "Content creators struggled with manual content organization and optimization, leading to inefficient workflows and suboptimal content performance.",
-    approach: "Leveraged natural language processing and machine learning algorithms to automate content analysis. Implemented a user-friendly interface for content management.",
-    solution: "Built an AI-powered platform that automatically analyzes, categorizes, and suggests optimizations for content, while providing detailed analytics.",
-    impact: "Reduced content processing time by 60% for clients. Improved content engagement rates by an average of 35% through AI-powered optimization suggestions.",
-    technologies: ["Python", "TensorFlow", "React", "FastAPI", "PostgreSQL", "AWS", "Docker"],
+    description: "A content management system that automatically categorizes and tags submitted content, with confidence scoring and engagement analytics.",
+    problem: "Teams publishing at volume spend significant time manually sorting and tagging content, and inconsistent categorization makes later retrieval and reporting unreliable.",
+    approach: "Built a FastAPI backend exposing content CRUD, categorization and analytics endpoints, with the categorization service returning both a predicted category and a confidence score so low-confidence results can be flagged for human review.",
+    solution: "Delivered a working API with seven endpoints covering content management, categorization and engagement analytics, plus a browser-based dashboard for submitting content and inspecting categorization results and suggested tags.",
+    impact: "A portfolio reference implementation demonstrating the full pipeline from content submission through categorization to analytics. The public demo runs a rule-based classifier in the browser over a sample dataset so it can be explored without a backend deployment.",
+    technologies: ["Python", "FastAPI", "Pydantic", "REST API", "JavaScript", "HTML/CSS"],
     imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80",
     demoUrl: "https://timely-mochi-688563.netlify.app",
     sourceUrl: "https://github.com/izzymarc/ai-cms",
     metrics: [
       {
-        label: "Time Saved",
-        value: "60%"
+        label: "API Endpoints",
+        value: "7"
       },
       {
-        label: "Engagement Increase",
-        value: "35%"
+        label: "Scoring",
+        value: "Per-result confidence"
       },
       {
-        label: "Active Projects",
-        value: "100+"
+        label: "Interface",
+        value: "REST + dashboard"
       }
     ],
     gallery: [
@@ -306,27 +306,27 @@ export const projects: Project[] = [
   {
     title: "Financial Analytics Dashboard",
     category: "Data Visualization",
-    description: "A comprehensive financial analytics dashboard that provides real-time insights and predictive analysis for investment decisions.",
-    problem: "Investment firms needed a centralized platform to visualize and analyze complex financial data in real-time for better decision-making.",
-    approach: "Built a responsive dashboard using React and D3.js for visualization, with a Python backend for data processing and predictive analytics.",
-    solution: "Created an intuitive dashboard with interactive charts, real-time market data integration, and AI-powered trend analysis.",
-    impact: "Helped clients improve investment returns by 25% through better data visualization and predictive insights. Now used by 20+ investment firms.",
-    technologies: ["React", "D3.js", "Python", "FastAPI", "PostgreSQL", "Redis", "AWS"],
+    description: "A financial analytics dashboard providing market data, technical indicators, portfolio tracking and risk metrics in a single interface.",
+    problem: "Evaluating a position means pulling together price history, technical indicators, portfolio exposure and risk measures — data that normally lives in separate tools, making quick assessment difficult.",
+    approach: "Built a FastAPI backend exposing market data, indicator, portfolio and alert endpoints, computing indicators such as RSI, MACD and SMA server-side. Paired it with a dashboard presenting price charts, holdings and risk analytics across three views.",
+    solution: "Delivered a dashboard with market, portfolio and analytics tabs covering live-updating price charts, technical indicators, a holdings table with per-position P&L, and risk metrics including Sharpe ratio, VaR, beta and maximum drawdown.",
+    impact: "A portfolio reference implementation showing the full path from market data ingestion through indicator computation to risk reporting. The public demo uses simulated price data so the interface can be explored without market data credentials.",
+    technologies: ["Python", "FastAPI", "Pydantic", "REST API", "JavaScript", "HTML/CSS"],
     imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     demoUrl: "https://gilded-kringle-e999bc.netlify.app",
     sourceUrl: "https://github.com/izzymarc/finance-dashboard",
     metrics: [
       {
-        label: "Investment Return Increase",
-        value: "25%"
+        label: "API Endpoints",
+        value: "9"
       },
       {
-        label: "Active Firms",
-        value: "20+"
+        label: "Risk Metrics",
+        value: "Sharpe, VaR, Beta"
       },
       {
-        label: "Daily Active Users",
-        value: "500+"
+        label: "Dashboard Views",
+        value: "3"
       }
     ],
     gallery: [
