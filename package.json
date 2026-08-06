@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "Portfolio website",
   "scripts": {
-    "build": "cd client && npm ci && npm run build && cd .. && mkdir -p dist && cp -R client/dist/public dist/public",
+    "build": "cd client && npm ci && npm run build && cd .. && rm -rf dist && mkdir -p dist && cp -R client/dist/public dist/public",
     "dev": "cd client && npm run dev",
     "preview": "cd client && npm run preview"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "netlify-cli": "^27.0.1"
+  }
 }
