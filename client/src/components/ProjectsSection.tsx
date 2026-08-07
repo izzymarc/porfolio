@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { projects } from "@/constants/data";
+import { projects, personalInfo } from "@/constants/data";
 import { Eye, Code2, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
@@ -159,7 +159,7 @@ const ProjectsSection = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <motion.a 
-            href="https://github.com/ezekielgwamna" 
+            href={personalInfo.githubUrl} 
             target="_blank" 
             rel="noopener noreferrer" 
             className="inline-flex items-center text-primary hover:text-primary/80 font-medium gap-1 group"

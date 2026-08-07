@@ -52,7 +52,7 @@ export const personalInfo: PersonalInfo = {
   resumeUrl: "/resume.pdf",
   githubUrl: "https://github.com/izzymarc",
   linkedinUrl: "https://linkedin.com/in/ezekiel-funom-gwamna3b3060159",
-  twitterUrl: "https://twitter.com/ezekielgwamna",
+  twitterUrl: "https://twitter.com/ezzymarc",
   availability: "Available for immediate start or with standard notice period",
   about: "I am a Software Engineer and Data Analyst currently completing my B.Sc. in Computer Science at the National Open University of Nigeria, with an ALX Software Engineering certification. I bring together strong back-end development skills, AI-powered solutions, and specialized training in global health systems and leadership to deliver impactful, scalable technology solutions.",
   education: [
@@ -136,12 +136,12 @@ export const personalInfo: PersonalInfo = {
     },
     {
       name: "Twitter",
-      url: "https://twitter.com/ezekielgwamna",
+      url: "https://twitter.com/ezzymarc",
       icon: Twitter
     },
     {
       name: "Instagram",
-      url: "https://instagram.com/ezekielgwamna",
+      url: "https://instagram.com/ezzymarc",
       icon: Instagram
     }
   ]
