@@ -134,6 +134,18 @@ Each of those repos owns its own `netlify.toml` and Netlify site ID. Nothing in 
 repository deploys to Netlify — the root `netlify.toml` here is a leftover from an
 earlier hosting experiment.
 
+### GitHub Pages — removed
+
+A `.github/workflows/deploy.yml` used to publish to GitHub Pages. It was deleted
+because it was both broken and unwanted:
+
+- It failed on every run (33/33) at its `Verify build output` step, which listed
+  `client/dist/assets` while Vite emits to `client/dist/public/assets`.
+- Its Pages site redirected to `ezekielgwamna.me`, a domain that is not ours and
+  no longer resolves.
+
+Cloudflare Pages is the only deploy path. Do not re-add a Pages workflow.
+
 ## License
 
 MIT
