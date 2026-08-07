@@ -1,17 +1,15 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronDown, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { personalInfo } from "@/constants/data";
 import { useEffect, useState, useRef } from "react";
 import profileImage from "@/assets/images/profile.jpg";
 
 const profileImageUrl = profileImage;
 
-const socialLinks = [
-  { name: "GitHub", url: personalInfo.githubUrl, icon: Github },
-  { name: "LinkedIn", url: personalInfo.linkedinUrl, icon: Linkedin },
-  { name: "Twitter", url: personalInfo.twitterUrl, icon: Twitter }
-];
+// Single source of truth: adding a platform to personalInfo.socialLinks
+// surfaces it here automatically instead of needing a parallel list.
+const socialLinks = personalInfo.socialLinks;
 
 const HeroSection = () => {
   const [typedText, setTypedText] = useState("");

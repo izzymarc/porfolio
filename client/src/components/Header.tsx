@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation, Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Home, User, Briefcase, Code, BookOpen, FileText, Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { Menu, X, Home, User, Briefcase, Code, BookOpen, FileText, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { personalInfo } from "@/constants/data";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -47,11 +47,9 @@ const Header = () => {
     { path: "/contact", label: "Contact", icon: Mail, isPage: true },
   ];
 
-  const socialLinks = [
-    { icon: Github, href: personalInfo.githubUrl, label: "GitHub" },
-    { icon: Linkedin, href: personalInfo.linkedinUrl, label: "LinkedIn" },
-    { icon: Twitter, href: personalInfo.twitterUrl, label: "Twitter" },
-  ];
+  // Single source of truth: adding a platform to personalInfo.socialLinks
+  // surfaces it here automatically instead of needing a parallel list.
+  const socialLinks = personalInfo.socialLinks;
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -100,10 +98,11 @@ const Header = () => {
                 const Icon = link.icon;
                 return (
                   <a
-                    key={link.label}
-                    href={link.href}
+                    key={link.name}
+                    href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={link.name}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     <Icon className="h-4 w-4" />
